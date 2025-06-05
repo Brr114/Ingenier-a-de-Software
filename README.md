@@ -1,0 +1,1 @@
+Este sistema está diseñado para gestionar las operaciones principales de una mueblería, incluyendo el catálogo de muebles, el manejo de pedidos, la relación con clientes, y la interacción entre los distintos componentes del software.
