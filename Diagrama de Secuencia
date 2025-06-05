@@ -1,0 +1,19 @@
+@startuml
+actor Usuario
+participant "Frontend Web"
+participant "API Gateway"
+participant "Servicio de Pedidos"
+participant "Servicio de Pagos"
+participant "Servicio de Envíos"
+
+Usuario -> "Frontend Web": Elige mueble
+"Frontend Web" -> "API Gateway": Solicita compra
+"API Gateway" -> "Servicio de Pedidos": Crear orden
+"Servicio de Pedidos" --> "API Gateway": Confirmación de orden
+"API Gateway" -> "Servicio de Pagos": Procesar pago
+"Servicio de Pagos" --> "API Gateway": Pago confirmado
+"API Gateway" -> "Servicio de Envíos": Solicita envío
+"Servicio de Envíos" --> "API Gateway": Envío programado
+"API Gateway" -> "Frontend Web": Orden completada
+
+@enduml
