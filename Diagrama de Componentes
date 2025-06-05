@@ -1,0 +1,14 @@
+@startuml
+package "Plataforma Mueblería" {
+  [Frontend Web] --> [API Gateway]
+  [Frontend Móvil] --> [API Gateway]
+  [Frontend Escritorio] --> [API Gateway]
+
+  [API Gateway] --> [Servicio de Usuarios]
+  [API Gateway] --> [Servicio de Catálogo]
+  [API Gateway] --> [Servicio de Pedidos]
+  [API Gateway] --> [Servicio de Pagos]
+  [API Gateway] --> [Servicio de Envíos]
+}
+
+@enduml
