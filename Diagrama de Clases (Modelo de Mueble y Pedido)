@@ -1,0 +1,29 @@
+@startuml
+
+class Mueble {
+  - id: int
+  - nombre: string
+  - precio: double
+  - stock: int
+  + mostrarInfo(): void
+}
+
+class Pedido {
+  - id: int
+  - fecha: Date
+  - total: double
+  - estado: string
+  + calcularTotal(): double
+}
+
+class Usuario {
+  - id: int
+  - nombre: string
+  - email: string
+  + iniciarSesion(): bool
+}
+
+Usuario "1" -- "0..*" Pedido
+Pedido "1" -- "1..*" Mueble
+
+@enduml
